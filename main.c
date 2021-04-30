@@ -4,47 +4,55 @@ const double pi = 3.141592653589793238462643383279502884197;
 
 //const float pi_approx = 3.14; uncomment if you want this var
 
-int add(double a, double b) {
+double add(double a, double b) {
 	return a + b;
 }
 
-int subtract(double a, double b) {
+double subtract(double a, double b) {
 	return a - b;
 }
 
-int multiply(double a, double b) {
+double multiply(double a, double b) {
 	return a * b;
 }
 
-int divide(double a, double b) {
+double divide(double a, double b) {
 	return a / b;
 }
 
-int square(double n) {
+double square(double n) {
 	return n*n;
 }
 
-int square_area(double s) {
+double square_area(double s) {
 	return s*s;
 }
 
-int triangle_area(double b, double h/*base and height*/) {
+double triangle_area(double b, double h/*base and height*/) {
 	return b*h / 2;
 }
 
-int get_radius(double d/*diameter*/) {
-	return d/2; //Alternitively C/2π but that needs circumfrence
+double get_radius(double d/*diameter*/) {
+	return d/2; //Alternatively C/2π but that needs circumfrence
 }
 
-int get_diameter(double r/*radius*/)  {
+double get_diameter(double r/*radius*/)  {
 	return r*2;
 }
 
-int get_circumfrence(double r/*radius*/) {
+double get_circumfrence(double r/*radius*/) {
 	return pi * square(r); //C = π(2r)
 }
 
+
+
 int main(void) {
 	printf("Hello World\n");
+	printf("pi is equal to %lf\n", pi);
+	printf("8 + 2 is %lf\n", add(8, 2));
+	printf("8 - 2 is %lf\n", subtract(8, 2));
+	printf("8 * 2 is %lf\n", multiply(8, 2));
+	printf("8 / 2 is %lf\n", divide(8, 2));
+	printf("2 squared is %lf\n", square(2));
 	return 0;
 }
