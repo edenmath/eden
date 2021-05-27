@@ -40,3 +40,5 @@ if (condition) {
 }
 ```
 Notice that the inner closing bracket is indented on the same level as the inner if statement.
+
+Great! Now that you've read this file (hopefully completely), you are ready to contribute to Eden
