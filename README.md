@@ -1,4 +1,4 @@
-# Eden)
+# Eden
 
 Not even close to done but I figure people can help me fix this before it gets too out of hand.
 
