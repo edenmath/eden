@@ -8,6 +8,7 @@ There are some simple general rules
 2. Don't open fake issues (this is obvious but trust me, when it happens it's frustrating)
 
 There are also some style guidelines:
+(You only have to read these if you plan on contributing code)
 
 1: Indents should be 4 characters wide and spaces
 
