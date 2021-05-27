@@ -7,6 +7,10 @@ There are some simple general rules
 1. Don't be rude
 2. Don't open fake issues (this is obvious but trust me, when it happens it's frustrating)
 
+As well as some requirements for contributing:
+1. Knowing enough C to code something to contribute
+2. Being able to create a pull request for it
+
 There are also some style guidelines:
 (You only have to read these if you plan on contributing code)
 
