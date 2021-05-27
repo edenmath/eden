@@ -1,5 +1,6 @@
 #include "consts.c"
-#include "squares.c"
+#include "rects.c"
+#include "functions.c"
 
 // Triangles
 double get_triangle_area(double b, double h/*base and height*/) {
