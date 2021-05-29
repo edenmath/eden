@@ -106,9 +106,11 @@ double eden_arctan_2(double y, double x) {
 double eden_sqrt(double x) {
   uint64_t int_val = *((uint64_t *)(&x));
 
-  int_val = (int_val & (((uint64_t)(1) << 52) - 1)) | ((((((int_val >> 52) - 1024) + 1) >> 1) + 1023) << 52);
+  int_val -= (uint64_t)(1023) << 52;
+  int_val -= (int_val >> 1) & 0x7FF0000000000000;
+  int_val += (uint64_t)(1023) << 52;
 
-  double result = *((double *)(&int_val));
+  double result = *((double *)(&int_val)) * 0.5;
 
   result = 0.5 * (result + x / result);
   result = 0.5 * (result + x / result);
@@ -124,9 +126,11 @@ double eden_cbrt(double _x) {
 
   uint64_t int_val = *((uint64_t *)(&x));
 
-  int_val = (int_val & (((uint64_t)(1) << 52) - 1)) | ((((((int_val >> 52) - 1024) + 1) / 3) + 1023) << 52);
+  int_val -= (uint64_t)(1023) << 52;
+  int_val -= (int_val / 3) & 0x7FF0000000000000;
+  int_val += (uint64_t)(1023) << 52;
 
-  double result = *((double *)(&int_val));
+  double result = *((double *)(&int_val)) * 0.5;
 
   result = (2.0 * result + x / (result * result)) / 3.0;
   result = (2.0 * result + x / (result * result)) / 3.0;
