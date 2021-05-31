@@ -10,6 +10,11 @@
 #define EDEN_TAU 6.283185307179586476925286
 #define EDEN_PHI 1.618033988749894848204586
 #define EDEN_E   2.718281828459045235360287
+#define EDEN_EULER 0.5772156649015328606065
+#define EDEN_CONWAY 1.303577269034296391257
+#define EDEN_PLASTIC 1.32471795724474602596
+#define EDEN_PRIME 0.4146825098511116602481
+#define EDEN_RECEP_FIB 3.359885666243177553
 
 // Bi/Tridimensional object functions
 
@@ -52,5 +57,7 @@ double eden_sqrt(double x);
 double eden_cbrt(double x);
 
 double eden_pow(double x, double exp);
+
+double eden_round(double x);
 
 #endif

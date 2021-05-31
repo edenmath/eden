@@ -18,5 +18,8 @@ int main(void) {
   printf("cube root of -7 is %lf\n", eden_cbrt(-7));
   printf("cube root of -6 is %lf\n", eden_cbrt(-6));
 
+  printf("0.56 rounded is %lf\n", eden_round(0.56));
+  printf("-90.76 rounded is %lf\n", eden_round(-90.76));
+
 	return 0;
 }

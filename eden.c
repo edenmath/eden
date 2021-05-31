@@ -1,6 +1,11 @@
 #include <stdint.h>
 #include "eden.h"
 
+
+/*
+--------------------- Geometrical Functions ---------------------
+*/
+
 double eden_perim_circle(double radius) {
   return 2 * EDEN_PI * radius;
 }
@@ -53,9 +58,9 @@ double eden_vol_cillin(double radius, double depth) {
   return EDEN_PI * radius * radius * depth;
 }
 
-double eden_abs(double x) {
-  return x < 0 ? -x : x;
-}
+/*
+--------------------- Trigonometric Functions ---------------------
+*/
 
 double eden_sin(double theta) {
   return eden_cos(theta + 1.5 * EDEN_PI);
@@ -103,6 +108,14 @@ double eden_arctan_2(double y, double x) {
   }
 }
 
+/*
+--------------------- Algebraic Stuff ---------------------
+*/
+
+double eden_abs(double x) {
+  return x < 0 ? -x : x;
+}
+
 double eden_sqrt(double x) {
   uint64_t int_val = *((uint64_t *)(&x));
 
@@ -143,4 +156,11 @@ double eden_cbrt(double _x) {
 
 double eden_pow(double x, double exp) {
   return 0; // TODO: Take the idea of the sqrt and pass it to here
+}
+
+double eden_round(double x) {
+  if (x < 0.0)
+    return (int)(x - 0.5);
+  else
+    return (int)(x + 0.5);
 }
