@@ -59,5 +59,7 @@ double eden_cbrt(double x);
 double eden_pow(double x, double exp);
 
 double eden_round(double x);
+double eden_ceil(double x);
+double eden_floor(double x);
 
 #endif
