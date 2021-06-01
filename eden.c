@@ -164,3 +164,11 @@ double eden_round(double x) {
   else
     return (int)(x + 0.5);
 }
+
+double eden_ceil(double x) {
+  return (int)(x + 1);
+}
+
+double eden_floor(double x) {
+  return (int)x;
+}
