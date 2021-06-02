@@ -24,6 +24,10 @@ int main(void) {
 	printf("45.1 ceil is %lf\n", eden_ceil(45.1));
 	printf("0.7 floor is %lf\n", eden_floor(0.7));
 	printf("45.1 floor is %lf\n", eden_floor(45.1));
+	printf("12.87238273 trunc is %d\n", eden_trunc(12.87238273));
+	printf("-102.23294 trunc is %d\n", eden_trunc(-102.23294));
 
+	printf("log10(3) is %lf\n", eden_log10(3));
+	printf("logn(45) is %lf\n", eden_logn(45));
 	return 0;
 }
