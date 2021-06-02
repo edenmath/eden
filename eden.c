@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include "eden.h"
 
+#define LOGN10 2.3025850929940456840179914546844
 
 /*
 --------------------- Geometrical Functions ---------------------
@@ -171,4 +172,31 @@ double eden_ceil(double x) {
 
 double eden_floor(double x) {
   return (int)x;
+}
+
+int eden_trunc(double x) {
+  return (int)x;
+}
+
+double eden_logn(double x) {
+    double old_sum = 0.0;
+    double a = (x - 1) / (x + 1);
+    double b = a * a;
+    double denom = 1.0;
+    double frac = a;
+    double term = frac;
+    double sum = term;
+
+    while ( sum != old_sum )
+    {
+        old_sum = sum;
+        denom += 2.0;
+        frac *= b;
+        sum += frac / denom;
+    }
+    return 2.0 * sum;
+}
+
+double eden_log10(double x) {
+    return eden_logn(x) / LOGN10;    
 }

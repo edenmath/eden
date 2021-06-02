@@ -61,5 +61,9 @@ double eden_pow(double x, double exp);
 double eden_round(double x);
 double eden_ceil(double x);
 double eden_floor(double x);
+int eden_trunc(double x);
+
+double eden_logn(double x);
+double eden_log10(double x);
 
 #endif
